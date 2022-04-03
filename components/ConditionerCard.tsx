@@ -42,7 +42,7 @@ export const ConditionerCard: FC<Props> = ({ conditioner: conditioner }) => {
       <label className="p-2 block">Площадь помещения
         <div className="mt-2 bg-neutral-200 rounded-lg inline-flex">
           {getVariants()?.map(variant => (
-            <div>
+            <div key={variant.id}>
               <button className={selectedVariant.area === variant.area ? 'bg-blue-600 p-2 rounded-lg text-white' : 'p-2'} onClick={() => selectVariant(variant)}>
                 {variant.area}м²
               </button>
