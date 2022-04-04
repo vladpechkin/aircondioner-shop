@@ -77,39 +77,39 @@
     "name": "Roland Favorite",
     "onOffVariants": [
       {
-        "id": "FU–07HSS010/N5",
+        "id": "FU-07HSS010/N5",
         "area": 20,
         "price": 23000
       },
       {
-        "id": "FU–09HSS010/N4",
+        "id": "FU-09HSS010/N4",
         "area": 25,
         "price": 27000
       },
       {
-        "id": "FU–12HSS010/N4",
+        "id": "FU-12HSS010/N4",
         "area": 30,
         "price": 35000
       },
       {
-        "id": "FU–18HSS010/N4",
+        "id": "FU-18HSS010/N4",
         "area": 50,
         "price": 58000
       }
     ],
     "inverterVariants": [
       {
-        "id": "FIU–07HSS010/N4",
+        "id": "FIU-07HSS010/N4",
         "area": 20,
         "price": 34000
       },
       {
-        "id": "FIU–09HSS010/N4",
+        "id": "FIU-09HSS010/N4",
         "area": 25,
         "price": 36000
       },
       {
-        "id": "FIU–12HSS010/N3",
+        "id": "FIU-12HSS010/N3",
         "area": 30,
         "price": 42000
       }
