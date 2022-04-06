@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Image from 'next/image'
 import { Conditioner } from '../types'
 import { FC } from 'react'
 
@@ -26,8 +25,8 @@ export const ConditionerCard: FC<Props> = ({ conditioner: conditioner }) => {
   }
 
   return (
-    <div className="p-2 shadow-lg rounded-lg flex flex-col items-start bg-white" key={conditioner.name}>
-      <Image width="320" height="160" className="object-cover" src={`/${conditioner.name}.webp`} />
+    <div className="p-2 m-2 shadow-xl rounded-lg flex flex-col items-start bg-white" key={conditioner.name}>
+      <img width="320" height="160" className="object-cover" src={`/${conditioner.name}.webp`} alt="Изображение кондиционера"/>
       <h3 className="m-2 font-medium">{conditioner.name}</h3>
       <label className="p-2">
         <p>Тип работы кондиционера</p>

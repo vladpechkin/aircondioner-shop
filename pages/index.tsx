@@ -8,20 +8,23 @@ const Index: NextPage = () => {
       <section className="h-screen flex flex-col">
         <header className="p-2 flex items-center w-full justify-between text-white">
           <div className="flex items-center">
-            <img src="/logo.png" className="h-12 mx-2" />
-            <h1 className="text-xl font-medium m-2">Добрый мастер</h1>
+            <img width="48" height="48" src="/logo.png" className="mx-2" alt="Логотип бегемота с инструментами в руках" />
+            <h1 className="text-xl font-medium m-2">Добрый Мастер</h1>
           </div>
           <a className="bg-blue-600 rounded-lg px-4 py-2 m-2" href="tel:89785889023">Позвонить</a>
         </header>
-        <div className="flex h-full flex-col justify-center p-2 lg:ml-40 text-white">
-          <img className="h-full absolute top-0 left-0 w-full z-[-1] brightness-75 object-cover" src="/hero-bg.webp" alt="" />
-          <h2 className="text-4xl font-medium w-80 m-2">Ваш мастер <br />по подбору, установке и обслуживанию кондиционеров в Крыму</h2>
-          <a className="bg-blue-600 rounded-lg px-4 py-2 text-center w-80 mx-2 mt-4" href="tel:89785889023">Позвонить</a>
+        <div className="flex h-full justify-evenly items-center p-2 text-white">
+          <img className="h-full absolute top-0 left-0 w-full z-[-1] brightness-75 object-cover" src="/hero-bg.webp" alt="Здание с кондиционером на нем" />
+          <div className="flex flex-col">
+            <h2 className="text-4xl font-medium w-80 m-2">Ваш мастер <br />по подбору, установке и обслуживанию кондиционеров в Крыму</h2>
+            <a className="bg-blue-600 rounded-lg px-4 py-2 text-center w-80 mx-2 mt-4" href="tel:89785889023">Позвонить</a>
+          </div>
+          <img className="hidden sm:block" src="/logo.png" />
         </div>
       </section>
-      <section className="px-2 py-10 flex justify-center flex-col items-center">
+      <section className="px-2 py-8 flex justify-center flex-col items-center">
         <h2 className="text-2xl font-medium m-2">Каталог</h2>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] w-full gap-4 p-2">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] w-full">
           {conditioners.map(conditioner => (
             <ConditionerCard conditioner={conditioner} key={conditioner.name} />
           ))}
