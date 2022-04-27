@@ -25,39 +25,39 @@ export const ConditionerCard: FC<Props> = ({ conditioner: conditioner }) => {
   }
 
   return (
-    <div className="p-2 m-2 shadow-xl rounded-lg flex flex-col items-start bg-white" key={conditioner.name}>
-      <img width="320" height="160" className="object-cover" src={`/${conditioner.name}.webp`} alt="Изображение кондиционера"/>
-      <h3 className="m-2 font-medium">{conditioner.name}</h3>
-      <label className="p-2">
+    <div className="p-4 gap-4 shadow-xl rounded-lg flex flex-col items-start bg-white" key={conditioner.name}>
+      <img width="320" height="100" className="object-cover h-40 mx-auto" src={`/${conditioner.name}.webp`} alt="Изображение кондиционера"/>
+      <h3 className="font-medium">{conditioner.name}</h3>
+      <label className="flex flex-col gap-2">
         <p>Тип работы кондиционера</p>
-        <div className="mt-2 outline-blue-600 outline-1 outline rounded-lg flex">
+        <div className="outline-sky-600 outline-1 outline rounded-lg flex">
           <button
             disabled={!conditioner.onOffVariants}
             className={`
               px-4 py-2 first:rounded-l-lg last:rounded-r-lg 
-              ${!conditioner.onOffVariants ? 'text-neutral-500 bg-neutral-200 opacity-50' : !isInverter ? 'bg-blue-600 text-white' : 'text-blue-600'}
+              ${!conditioner.onOffVariants ? 'text-neutral-600 bg-neutral-200 opacity-50' : !isInverter ? 'bg-sky-600 text-white' : 'text-sky-600'}
             `} 
             onClick={() => handleSetInverter(false)}>
             On/Off
           </button>
-          <button className={`px-4 py-2 first:rounded-l-lg last:rounded-r-lg ${isInverter ? 'bg-blue-600 text-white' : 'text-blue-600'} ${!conditioner.inverterVariants && 'text-neutral-500 bg-neutral-200 opacity-50'}`} onClick={() => handleSetInverter(true)}>
+          <button className={`px-4 py-2 first:rounded-l-lg last:rounded-r-lg ${isInverter ? 'bg-sky-600 text-white' : 'text-sky-600'} ${!conditioner.inverterVariants && 'text-neutral-600 bg-neutral-200 opacity-50'}`} onClick={() => handleSetInverter(true)}>
             Инверторный
           </button>
         </div>
       </label>
-      <label className="p-2">
+      <label className="flex flex-col gap-2">
         <p>Площадь помещения</p>
-        <div className="mt-2 outline-blue-600 outline-1 outline rounded-lg">
+        <div className=" outline-sky-600 outline-1 outline rounded-lg">
           {getVariants()?.map(variant => (
-            <button className={`px-4 py-2 first:rounded-l-lg last:rounded-r-lg ${selectedVariant.area === variant.area ? 'bg-blue-600 text-white' : 'text-blue-600'}`} onClick={() => selectVariant(variant)} key={variant.id}>
+            <button className={`px-4 py-2 first:rounded-l-lg last:rounded-r-lg ${selectedVariant.area === variant.area ? 'bg-sky-600 text-white' : 'text-sky-600'}`} onClick={() => selectVariant(variant)} key={variant.id}>
               {variant.area}м²
             </button>
           ))}
         </div>
       </label>
-      <p className="m-2 text-2xl font-medium">{selectedVariant.price}₽</p>
+      <p className="text-2xl font-medium">{selectedVariant.price}₽</p>
       <div className="mt-auto w-full">
-        <a className="bg-blue-600 text-white rounded-lg px-4 py-2 m-2 text-center block" href="tel:89785889023">Заказать</a>
+        <a className="bg-sky-600 text-white rounded-lg px-4 py-2 text-center block" href="tel:89785889023">Заказать</a>
       </div>
     </div>
   )

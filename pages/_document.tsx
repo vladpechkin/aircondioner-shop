@@ -5,8 +5,7 @@ export default function Document() {
     <Html lang="ru">
       <Head>
         <link rel="icon" href="/logo.png" />
-        <meta name="description" content="Ваш мастер по подбору, установке и обслуживанию кондиционеров в Крыму" />
-        <title>Добрый Мастер</title>
+        <meta name="description" content="Подбор, продажа, установка и обслуживание различных видов кондиционеров для поддержки комфортного климата в любых помещениях Крыма" />
       </Head>
       <body>
         <Main />
