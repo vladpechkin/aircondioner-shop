@@ -4,5 +4,16 @@
 
 @font-face {
   font-family: Alegreya;
-  src: url('public/AlegreyaSansSC-Black.ttf');
+  src: url('AlegreyaSans-Black.ttf');
+}
+
+@layer components {
+  p,
+  li {
+    @apply max-w-prose
+  }
+
+  i {
+    @apply text-2xl
+  }
 }
